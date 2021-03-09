@@ -1,11 +1,11 @@
-const typewriter = string => {
-  let delay = 0;
-  for (const char of sentence) {
-    setTimeout(() => process.stdout.write(char), delay);
-    delay += 20;
+const typewriter = (string, delayIn = 30) => {
+  let charDelay = 0;
+  for (const char of string) {
+    setTimeout(() => process.stdout.write(char), charDelay);
+    charDelay += delayIn;
   };
 
-  setTimeout(() => process.stdout.write("\n"), delay);
+  setTimeout(() => process.stdout.write("\n"), charDelay);
 };
 
 //Testing code
